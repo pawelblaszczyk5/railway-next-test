@@ -16,6 +16,8 @@ const ExampleStreamedContent = async () => {
 };
 
 const Home = () => {
+  unstable_noStore();
+
   return (
     <>
       <h1>Hello world</h1>
