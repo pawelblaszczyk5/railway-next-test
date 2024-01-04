@@ -2,6 +2,11 @@ import { unstable_noStore } from "next/cache";
 import Image from "next/image";
 import { Suspense } from "react";
 
+import first from "#/app/_assets/693-200x300.jpg";
+import second from "#/app/_assets/1038-220x300.jpg";
+import third from "#/app/_assets/1002-230x300.jpg";
+import fourth from "#/app/_assets/1077-240x300.jpg";
+
 const ExampleStreamedContent = async () => {
   unstable_noStore();
 
@@ -20,38 +25,10 @@ const Home = () => {
         >
           <ExampleStreamedContent />
         </Suspense>
-        <Image
-          loading="eager"
-          className="bg-sky-900"
-          src="/693-200x300.jpg"
-          alt=""
-          width={200}
-          height={300}
-        />
-        <Image
-          loading="eager"
-          className="bg-sky-900"
-          src="/1038-220x300.jpg"
-          alt=""
-          width={220}
-          height={300}
-        />
-        <Image
-          loading="eager"
-          className="bg-sky-900"
-          src="/1002-230x300.jpg"
-          alt=""
-          width={230}
-          height={300}
-        />
-        <Image
-          loading="eager"
-          className="bg-sky-900"
-          src="/1077-240x300.jpg"
-          alt=""
-          width={240}
-          height={300}
-        />
+        <Image loading="eager" src={first} alt="" />
+        <Image loading="eager" src={second} alt="" />
+        <Image loading="eager" src={third} alt="" />
+        <Image loading="eager" src={fourth} alt="" />
       </p>
     </>
   );
