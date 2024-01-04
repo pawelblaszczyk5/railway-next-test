@@ -1,4 +1,5 @@
 import { unstable_noStore } from "next/cache";
+import Image from "next/image";
 import { Suspense } from "react";
 
 const ExampleStreamedContent = async () => {
@@ -19,30 +20,30 @@ const Home = () => {
         >
           <ExampleStreamedContent />
         </Suspense>
-        <img
+        <Image
           className="bg-sky-900"
-          src="https://picsum.photos/200/300"
+          src="/693-200x300.jpg"
           alt=""
           width={200}
           height={300}
         />
-        <img
+        <Image
           className="bg-sky-900"
-          src="https://picsum.photos/220/300"
+          src="/1038-220x300.jpg"
           alt=""
           width={220}
           height={300}
         />
-        <img
+        <Image
           className="bg-sky-900"
-          src="https://picsum.photos/230/300"
+          src="/1002-230x300.jpg"
           alt=""
           width={230}
           height={300}
         />
-        <img
+        <Image
           className="bg-sky-900"
-          src="https://picsum.photos/240/300"
+          src="/1077-240x300.jpg"
           alt=""
           width={240}
           height={300}
