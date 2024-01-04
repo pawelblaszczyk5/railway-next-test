@@ -21,6 +21,7 @@ const Home = () => {
           <ExampleStreamedContent />
         </Suspense>
         <Image
+          loading="eager"
           className="bg-sky-900"
           src="/693-200x300.jpg"
           alt=""
@@ -28,6 +29,7 @@ const Home = () => {
           height={300}
         />
         <Image
+          loading="eager"
           className="bg-sky-900"
           src="/1038-220x300.jpg"
           alt=""
@@ -35,6 +37,7 @@ const Home = () => {
           height={300}
         />
         <Image
+          loading="eager"
           className="bg-sky-900"
           src="/1002-230x300.jpg"
           alt=""
@@ -42,6 +45,7 @@ const Home = () => {
           height={300}
         />
         <Image
+          loading="eager"
           className="bg-sky-900"
           src="/1077-240x300.jpg"
           alt=""
