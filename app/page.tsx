@@ -45,7 +45,9 @@ const Home = () => {
           <ExampleStreamedContent useCache />
         </Suspense>
         <Suspense
-          fallback={<span>Waiting, here goes your random number...</span>}
+          fallback={
+            <span>Waiting, here goes your random (uncached) number...</span>
+          }
         >
           <ExampleStreamedContent />
         </Suspense>
