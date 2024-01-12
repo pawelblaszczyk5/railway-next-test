@@ -11,7 +11,10 @@ export const Form = () => {
     error: undefined,
   });
 
-  const [optimisticState, setOptimisticState] = useOptimistic(state);
+  const [namesList, addOptimisticNewName] = useOptimistic(
+    state.namesList,
+    (namesList, name: string) => [...namesList, name]
+  );
 
   return (
     <div className="flex flex-col gap-3 items-start">
@@ -24,10 +27,7 @@ export const Form = () => {
           const newName = input.value;
 
           startTransition(() => {
-            setOptimisticState((state) => ({
-              ...state,
-              namesList: [...state.namesList, newName],
-            }));
+            addOptimisticNewName(newName);
           });
         }}
         action={addNewName}
@@ -39,7 +39,7 @@ export const Form = () => {
         <button>Submit</button>
       </form>
       <ul className="flex flex-col gap-3 items-start">
-        {optimisticState.namesList.map((name) => (
+        {namesList.map((name) => (
           <li key={name}>{name}</li>
         ))}
       </ul>
